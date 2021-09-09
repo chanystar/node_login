@@ -1,6 +1,10 @@
+// 해시코드 사용하기 위함
 const crypto = require('crypto');
+
+// DB 사용하기 위한 라이브러리
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
+
 const bodyParser = require('body-parser');
 // var mysql = require('mysql');
 // var dbConfig = require('./dbconfig');
@@ -80,6 +84,8 @@ module.exports = function (app) {
     });//pbkdf2
   }); // end of app.post
 
+
+  // DB 연결 코드
   // app.post('/login', function (req, res) {
   // var id = req.body.username;
   // var pw = req.body.password;
